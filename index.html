@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <script>
+  window.pixelId = "67edf4c3c10671e61577006d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favi.webp" type="image/png" />
+    <title>Ajude o Jardel e sua família</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/qrcode.min.js"></script>
+  </head>
+<script>
+  // Parâmetros que você quer passar adiante
+  const paramsToKeep = [
+    "utm_source",
+    "utm_campaign",
+    "utm_medium",
+    "utm_content",
+    "utm_term",
+    "xcod"
+  ];
+
+  function getCurrentParams() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const result = {};
+    paramsToKeep.forEach(param => {
+      const value = urlSearchParams.get(param);
+      if (value) result[param] = value;
+    });
+    return result;
+  }
+
+  function buildQueryString(params) {
+    return Object.entries(params)
+      .map(([key, val]) => ${encodeURIComponent(key)}=${encodeURIComponent(val)})
+      .join("&");
+  }
+
+  function updateInternalLinks() {
+    const links = document.querySelectorAll("a[href]");
+    const currentParams = getCurrentParams();
+    if (Object.keys(currentParams).length === 0) return;
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Só aplica em links relativos (ou seja, dentro do site)
+      if (href.startsWith("/") || href.startsWith(window.location.origin)) {
+        const url = new URL(href, window.location.origin);
+        const linkParams = new URLSearchParams(url.search);
+
+        // Adiciona os parâmetros desejados
+        for (const key in currentParams) {
+          linkParams.set(key, currentParams[key]);
+        }
+
+        url.search = linkParams.toString();
+        link.setAttribute("href", url.pathname + url.search);
+      }
+    });
+  }
+
+  // Quando a página carregar, atualiza os links
+  document.addEventListener("DOMContentLoaded", updateInternalLinks);
+</script>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a>
+            <img src="images/ajudelogo.png" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="post">
+      <h3>
+        💔 Uma família inteira nas costas. E um coração que não desiste.
+      </h3>
+      <img src="images/henr1.png" alt="Jardel e família" />
+      <div class="image-container">
+        <div class="likes-container">
+          <img src="images/boll.png" alt="Corações" />
+          <span>117 corações recebidos ❤️</span>
+        </div>
+      </div>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Oi, eu sou o Jardel.</strong></p>
+      <p>
+        Não sou herói, nem rico, nem famoso. Sou apenas um homem comum que a vida empurrou para um papel que poucos aguentariam: o de carregar uma família inteira nas costas… sozinho.
+      </p>
+      <p>
+        Quando minha mãe faleceu, minha vida mudou pra sempre.<br>
+        Naquele dia, não perdi só a mulher que me criou com amor e esforço.<br>
+        Ganhei também a missão de cuidar dos meus três irmãos menores, que ficaram sem rumo, sem apoio, sem lar.<br>
+        Hoje, eles moram comigo. E além deles, também cuido dos meus dois filhos pequenos.<br>
+        Isso mesmo: são 5 crianças e adolescentes dentro da minha casa.<br>
+        Tudo isso com o que eu ganho no meu trabalho simples, lutando dia após dia pra não faltar o pão na mesa.
+      </p>
+      <p>
+        <strong>Mas a história não para por aí...</strong>
+      </p>
+      <p>
+        🍺 <strong>Luta contra o álcool, a dor que assombra a família</strong><br>
+        Minha irmã, infelizmente, enfrenta problemas graves com o alcoolismo.<br>
+        Ela tem três filhos, mas só dois moram com ela: um de 13 anos e outro de 15.<br><br>
+        O mais novo se envolveu com vícios perigosos que eu prefiro nem nomear aqui.<br><br>
+        O mais velho… esse parte meu coração.<br><br>
+        Esse menino, de apenas 15 anos, vive sozinho a maior parte do tempo.<br>
+        A mãe e o irmão quase não param em casa.<br>
+        Ele dorme sozinho, se vira pra comer, pra estudar, pra sobreviver.<br>
+        E sabe o que é pior? Ele nunca reclamou. Nunca pediu nada.<br>
+        Só carrega no olhar aquela dor muda de quem perdeu a infância cedo demais.
+      </p>
+      <p>
+        🏚️ <strong>A casa está caindo. Literalmente.</strong><br>
+        Atualmente, os dois moram numa casa velha, abandonada, com estrutura comprometida.<br>
+        É a antiga casa da minha mãe. O que já foi um lar cheio de vida, hoje parece mais um retrato do abandono.<br>
+        Não tem segurança, não tem conforto, não tem dignidade.
+      </p>
+      <p>
+        🙏 <strong>Por isso, criei essa vaquinha.</strong><br>
+        Porque sozinho eu já fui longe, mas agora preciso da sua ajuda pra ir além.<br>
+        Meu maior sonho é dar um lar digno pra esse menino de 15 anos.<br>
+        Tirá-lo da solidão, do abandono, da escuridão.
+      </p>
+      <p>
+        Mas pra isso, eu preciso levantar recursos pra:
+      </p>
+      <ul>
+        <li>Reformar ou alugar uma casa segura;</li>
+        <li>Garantir alimentação e itens básicos;</li>
+        <li>Ajudar com transporte, escola e acompanhamento psicológico.</li>
+      </ul>
+      <p>
+        💌 <strong>Cada real doado é uma semente de esperança.</strong><br>
+        Se você chegou até aqui, eu te peço do fundo do coração:<br>
+        não feche essa página sem agir.<br>
+        Mesmo que seja 1 real, ele fará diferença.
+      </p>
+      <p>
+        📌 <strong>Doe.</strong><br>
+        📤 <strong>Compartilhe.</strong><br>
+        💬 <strong>Comente palavras de apoio.</strong>
+      </p>
+      <p>
+        Porque juntos, podemos mudar a história dessa família.<br>
+        Não com discursos… mas com ação.
+      </p>
+      <img src="images/laudo.webp" style="width: 90%; height: auto" alt="Laudo médico" />
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Você receberá:</strong></p>
+
+      <p><strong>● Atualizações semanais</strong> da nossa jornada</p>
+      <p><strong>● Vídeo do primeiro abraço</strong> dele com a prótese</p>
+      <p><strong>● Seu nome na nossa lista de anjos</strong> (se desejar)</p>
+
+      <p>
+        <strong>Compartilhe nossa história</strong>. Cada compartilhamento é uma
+        <strong>nova chance</strong> de devolver a infância ao meu filho.
+      </p>
+
+      <p><strong>Que Deus abençoe você e a sua família</strong>.</p>
+
+ <div id="button-section">
+        <div class="progress-content">
+          <div class="progress-text">
+            <h4>Arrecadado</h4>
+            <div class="progress-values">
+              <p>R$ 12.450,41</p>
+              <p>R$ 200.000,00</p>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 14%">
+              <strong>14%</strong>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="text-align: center;">Clique no valor <br> que deseja doar</h4>
+        <p class="donation-multiplier"><strong>✨ DOAÇÃO DUPLICADA! ✨</strong>
+         Doações a partir de R$50 serão multiplicadas por 2 pelos nossos patrocinadores e grupo de empresários que apoiam nossa campanha! Sua ajuda vale o dobro até 25/07. Não perca essa oportunidade de maximizar seu impacto na vida do Henrique!</p>
+        </div>
+      </div>
+      <div class="buttons-section">
+        <div class="buttons-section1">
+          <a href="https://checkout.geterectus.site/YEwR3AJYjkZdKyk">
+            <button class="post-button2">R$ 30</button>
+          </a>
+          <a href="https://checkout.geterectus.site/4KovG1vklqgyDEm">
+            <button class="post-button2">R$ 50</button>
+          </a>
+          <a href="https://checkout.geterectus.site/zj6aGn17y1ZwlK9">
+            <button class="post-button2">R$ 70</button>
+          </a>
+          <a href="https://checkout.geterectus.site/q510ZO6Jl83E9D4">
+            <button class="post-button2">R$ 100</button>
+          </a>
+          <a href="https://checkout.geterectus.site/VroegNVRoOgKwjd">
+            <button class="post-button2">R$ 150</button>
+          </a>
+        </div>
+        <div class="buttons-section1">
+          <a href="https://checkout.geterectus.site/rn4RgQJ81W3wBV7">
+            <button class="post-button2">R$ 200</button>
+          </a>
+          <a href="https://checkout.geterectus.site/bz5KZbMxyn37dLl">
+            <button class="post-button2">R$ 300</button>
+          </a>
+          <a href="https://checkout.geterectus.site/PyE2ZyJkPNGqRbV">
+            <button class="post-button2">R$ 500</button>
+          </a>
+          <a href="https://checkout.geterectus.site/7vJOGYjDyqgKXda">
+            <button class="post-button2">R$ 700</button>
+          </a>
+          <a href="https://checkout.geterectus.site/yOeXZKYEdqgAQap">
+            <button class="post-button2">R$ 1000</button>
+          </a>
+        </div>
+      </div>
+        <div class="sc-jXbUNg gNPJrz">
+          <div class="sc-jXbUNg dHwLb">
+            <div class="sc-jXbUNg jbBvcf"></div>
+            <div class="sc-jXbUNg dTrGCo sc-gRtvSG fpURXW"></div>
+          </div>
+        </div>
+        <div class="button-pix">
+          <div class="texto" id="1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a>
+            <img src="images/ajudelogo.png" />
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>2025 - Todos direitos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script data-cfasync="false" src="js/email-decode.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/toast.js"></script>
+    <script>
+      function copyEmail() {
+        const emailText = document.getElementById('donation-email').textContent;
+        navigator.clipboard.writeText(emailText)
+          .then(() => {
+            showToast('Email copiado com sucesso!', 'success');
+          })
+          .catch(err => {
+            console.error('Erro ao copiar email: ', err);
+            showToast('Erro ao copiar email', 'error');
+          });
+      }
+
+      function showToast(message, type) {
+        const toast = document.createElement('div');
+        toast.className = 'toast ' + type;
+        toast.innerHTML = `
+          <div class="toast-content">
+            <span>${message}</span>
+          </div>
+        `;
+        document.body.appendChild(toast);
+        
+        // Mostra o toast
+        setTimeout(() => {
+          toast.classList.add('show');
+        }, 100);
+        
+        // Remove o toast após 3 segundos
+        setTimeout(() => {
+          toast.classList.remove('show');
+          setTimeout(() => {
+            document.body.removeChild(toast);
+          }, 300);
+        }, 3000);
+      }
+    </script>
+    <style>
+      .email-donation {
+        margin: 20px auto;
+        max-width: 500px;
+        text-align: center;
+      }
+      .email-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto 20px;
+        padding: 12px;
+        background-color: #f5f8ff;
+        border-radius: 8px;
+        border: 1px solid #ccdeff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        max-width: 450px;
+      }
+      #donation-email {
+        font-weight: bold;
+        color: #3366cc;
+        font-size: 16px;
+      }
+      #copy-email-btn {
+        background-color: #1e88e5;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 15px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      #copy-email-btn:hover {
+        background-color: #1565c0;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Estilos da Toast */
+      .toast {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(100px);
+        padding: 12px 20px;
+        border-radius: 4px;
+        color: white;
+        font-weight: 500;
+        z-index: 9999;
+        opacity: 0;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        max-width: 80%;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      .toast.show {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+      }
+      
+      .toast.success {
+        background-color: #43a047;
+      }
+      
+      .toast.error {
+        background-color: #e53935;
+      }
+      
+      .toast-content {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+</body>
+</html>
